@@ -14,6 +14,8 @@ import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import { BookingProvider } from "./components/BookingContext";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
   return (
@@ -39,6 +41,8 @@ export default function App() {
           </Route>
         </Routes>
       </Router>
+      <Analytics />
+      <SpeedInsights />
     </BookingProvider>
   );
 }
