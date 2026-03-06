@@ -37,7 +37,7 @@ export default function Layout() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black/10">
         <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-12 h-20">
           <Link to="/" className="flex items-center gap-2 z-50 relative group">
-            <img src="https://www.zemnas.com/assets/zemnas-logo-transparent.png" alt="Zemnas Logo" className="h-8 w-auto object-contain" />
+            <img src="/logo.png" alt="Zemnas Logo" className="h-8 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
@@ -144,7 +144,7 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-32">
             <div className="md:col-span-4">
               <Link to="/" className="flex items-center gap-2 mb-6 group">
-                <img src="https://www.zemnas.com/assets/zemnas-logo-transparent.png" alt="Zemnas Logo" className="h-8 w-auto object-contain" />
+                <img src="/logo.png" alt="Zemnas Logo" className="h-8 w-auto object-contain" />
               </Link>
               <p className="text-white/60 text-lg leading-relaxed max-w-sm font-medium">
                 We combine creative and marketing to build digital systems that transform ideas into measurable growth.
