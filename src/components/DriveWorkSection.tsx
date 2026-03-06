@@ -70,11 +70,10 @@ export default function DriveWorkSection() {
             <button
               key={cat.category}
               onClick={() => setActiveCategory(cat.category)}
-              className={`px-8 py-4 rounded-full font-mono text-xs uppercase tracking-widest transition-all duration-500 border ${
-                activeCategory === cat.category
+              className={`px-8 py-4 rounded-full font-mono text-xs uppercase tracking-widest transition-all duration-500 border ${activeCategory === cat.category
                   ? "bg-black text-white border-black"
                   : "bg-transparent text-black/40 border-black/10 hover:border-black hover:text-black"
-              }`}
+                }`}
             >
               <span className="flex items-center gap-2">
                 <FolderOpen size={14} />
@@ -98,15 +97,15 @@ export default function DriveWorkSection() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="group relative"
               >
-                <div 
+                <div
                   className="relative aspect-video bg-black rounded-2xl overflow-hidden cursor-pointer group/card"
                   onClick={() => setSelectedVideo(video)}
                 >
                   {/* Thumbnail / Video Preview on Hover */}
                   <div className="absolute inset-0">
-                    <img 
-                      src={video.thumbnail} 
-                      alt={video.name} 
+                    <img
+                      src={video.thumbnail}
+                      alt={video.name}
                       className="w-full h-full object-cover opacity-60 group-hover/card:scale-110 transition-transform duration-1000 grayscale group-hover/card:grayscale-0"
                       referrerPolicy="no-referrer"
                     />
@@ -143,7 +142,7 @@ export default function DriveWorkSection() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 md:p-12 backdrop-blur-xl"
           >
-            <button 
+            <button
               onClick={() => setSelectedVideo(null)}
               className="absolute top-8 right-8 text-white/60 hover:text-white transition-colors p-2"
             >
@@ -156,22 +155,14 @@ export default function DriveWorkSection() {
               exit={{ scale: 0.9, opacity: 0 }}
               className="w-full max-w-6xl aspect-video bg-black rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(37,99,235,0.2)] border border-white/10 relative"
             >
-              <video
+              <iframe
                 key={selectedVideo.id}
-                src={selectedVideo.videoUrl}
-                poster={selectedVideo.thumbnail}
-                controls
-                autoPlay
-                playsInline
-                className="w-full h-full object-contain"
-                crossOrigin="anonymous"
-                onLoadStart={(e) => {
-                  const video = e.target as HTMLVideoElement;
-                  video.volume = 0.5;
-                }}
-              >
-                Your browser does not support the video tag.
-              </video>
+                src={selectedVideo.previewUrl}
+                className="w-full h-full"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                frameBorder="0"
+              />
             </motion.div>
 
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center">
