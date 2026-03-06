@@ -9,8 +9,8 @@ import CookieBanner from "./CookieBanner";
 const navLinks = [
   { name: "Work", path: "/work" },
   { name: "Case Studies", path: "/case-studies" },
-  { 
-    name: "Services", 
+  {
+    name: "Services",
     path: "/services",
     subLinks: [
       { name: "Creative Studio", path: "/services/creative-studio" },
@@ -144,13 +144,13 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-32">
             <div className="md:col-span-4">
               <Link to="/" className="flex items-center gap-2 mb-6 group">
-                <img src="/logo.png" alt="Zemnas Logo" className="h-8 w-auto object-contain" />
+                <img src="/logo-white.png" alt="Zemnas Logo" className="h-8 w-auto object-contain brightness-0 invert" />
               </Link>
               <p className="text-white/60 text-lg leading-relaxed max-w-sm font-medium">
                 We combine creative and marketing to build digital systems that transform ideas into measurable growth.
               </p>
             </div>
-            
+
             <div className="md:col-span-2 md:col-start-7">
               <h4 className="font-mono text-xs uppercase tracking-widest text-white/40 mb-6">Services</h4>
               <ul className="space-y-4 font-semibold uppercase tracking-wider">
@@ -182,7 +182,7 @@ export default function Layout() {
               </ul>
             </div>
           </div>
-          
+
           <div className="w-full border-t border-white/20 pt-10 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs uppercase tracking-widest text-white/40">
             <p>© {new Date().getFullYear()} ZEMNAS.</p>
             <div className="flex gap-8">
