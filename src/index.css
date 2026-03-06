@@ -6,6 +6,12 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
+button,
+[role="button"],
+a {
+  cursor: pointer;
+}
+
 @layer utilities {
   .brutal-border {
     @apply border-2 border-black;
